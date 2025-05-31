@@ -1,0 +1,9 @@
+This is a placeholder PDF file for the SEO Audit Checklist.
+    
+    MVM Digitals - SEO Audit Checklist
+    
+    Instructions:
+    1. Replace this placeholder file with your actual SEO Audit Checklist PDF.
+    2. Ensure the filename is 'seo-audit-checklist.pdf' and it's located in the 'public' directory.
+    
+    The download functionality in AuditFormModal.jsx and ContactForm.jsx points to '/seo-audit-checklist.pdf'.
