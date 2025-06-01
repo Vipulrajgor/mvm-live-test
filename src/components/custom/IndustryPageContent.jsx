@@ -132,7 +132,7 @@ import React from 'react';
                       <img  
                         class="w-full h-full object-cover" 
                         alt={caseStudy.title + " case study image"}
-                       src="https://images.unsplash.com/photo-1622675205169-901710ac8643" />
+                       src={caseStudy.image ? `/images/industries/${caseStudy.image}` : 'https://images.unsplash.com/photo-1622675205169-901710ac8643'} />
                     </div>
                   </div>
                 </Card>

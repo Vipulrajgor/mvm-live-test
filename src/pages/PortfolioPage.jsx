@@ -92,7 +92,7 @@ import React from 'react';
                       <img 
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         alt={`${item.title} project image`}
-                       src="https://images.unsplash.com/photo-1572177812156-58036aae439c" />
+                       src={item.image ? `/images/portfolio/${item.image}` : 'https://images.unsplash.com/photo-1572177812156-58036aae439c'} />
                       <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold rounded-full shadow">
                         {item.category}
                       </div>
@@ -100,10 +100,10 @@ import React from 'react';
                     <CardHeader className="pb-3">
                       <div className="flex items-center mb-3">
                         <img 
-                          src={`/logos/${item.logo}`}
+                          src={item.logo ? `/logos/${item.logo}` : 'https://images.unsplash.com/photo-1485531865381-286666aa80a9'}
                           alt={`${item.title.split(" for ")[1] || item.title} logo`}
                           class="h-10 w-auto mr-3 p-1 bg-slate-100 rounded"
-                         src="https://images.unsplash.com/photo-1485531865381-286666aa80a9" />
+                           />
                         <CardTitle className="text-xl font-bold text-slate-800 group-hover:text-primary transition-colors">
                           {item.title}
                         </CardTitle>
@@ -187,3 +187,4 @@ import React from 'react';
     };
 
     export default PortfolioPage;
+    export { portfolioItems };

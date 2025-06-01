@@ -18,6 +18,8 @@ import React, { Suspense, lazy } from 'react';
     const ManufacturingPage = lazy(() => import('@/pages/industries/ManufacturingPage'));
     const RealEstatePage = lazy(() => import('@/pages/industries/RealEstatePage'));
     const IndustryLayoutPage = lazy(() => import('@/pages/industries/IndustryLayoutPage'));
+    const BlogPostPage = lazy(() => import('@/pages/BlogPostPage'));
+    const PortfolioItemPage = lazy(() => import('@/pages/PortfolioItemPage'));
 
     const pageVariants = {
       initial: {
@@ -50,7 +52,9 @@ import React, { Suspense, lazy } from 'react';
             <Route path="/services" element={<PageLayout><ServicesPage /></PageLayout>} />
             <Route path="/services/:serviceId" element={<PageLayout><ServiceDetailPage /></PageLayout>} />
             <Route path="/portfolio" element={<PageLayout><PortfolioPage /></PageLayout>} />
+            <Route path="/portfolio/:itemId" element={<PageLayout><PortfolioItemPage /></PageLayout>} />
             <Route path="/blog" element={<PageLayout><BlogPage /></PageLayout>} />
+            <Route path="/blog/:postId" element={<PageLayout><BlogPostPage /></PageLayout>} />
             <Route path="/contact" element={<PageLayout><ContactPage /></PageLayout>} />
             <Route path="/industries/automotive" element={<PageLayout><IndustryLayoutPage pageContent={<AutomotivePage />} /></PageLayout>} />
             <Route path="/industries/manufacturing" element={<PageLayout><IndustryLayoutPage pageContent={<ManufacturingPage />} /></PageLayout>} />
